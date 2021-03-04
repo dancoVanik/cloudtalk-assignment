@@ -18,8 +18,10 @@ export class LoginComponent implements OnInit {
     }
 
     login() {
-        this._authenticationService.login()
-        this._router.navigateByUrl('');
+        if (this.loginFormGroupControl.valid) {
+            this._authenticationService.login()
+            this._router.navigateByUrl('');
+        }
     }
 
     ngOnInit(): void {

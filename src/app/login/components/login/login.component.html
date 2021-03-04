@@ -11,18 +11,18 @@
                     <mat-form-field class="top-padding-45 width-250" appearance="outline" color="primary">
                         <mat-label>Login</mat-label>
                         <input matInput
-                               placeholder="Enter login"
+                               placeholder="Enter your login here ..."
                                required
                                formControlName="loginControl"
                                type="text">
-                        <mat-hint>Login hint</mat-hint>
-                        <mat-error>Login error</mat-error>
+                        <mat-hint>Your nickname or email</mat-hint>
+                        <mat-error>Wrong login format</mat-error>
                     </mat-form-field>
 
                     <mat-form-field class="top-padding-45 width-250" appearance="outline" color="primary">
                         <mat-label>Password</mat-label>
                         <input matInput
-                               placeholder="Enter password"
+                               placeholder="Enter your password here ..."
                                required
                                formControlName="passwordControl"
                                [type]="hide ? 'password' : 'text'">
@@ -35,8 +35,8 @@
                                 {{hide ? 'visibility_off' : 'visibility'}}
                             </mat-icon>
                         </button>
-                        <mat-hint>Password hint</mat-hint>
-                        <mat-error>Message error</mat-error>
+                        <mat-hint>Your password</mat-hint>
+                        <mat-error>Wrong password format</mat-error>
                     </mat-form-field>
 
                     <div class="top-padding-45" fxLayout="row" fxLayoutAlign="end center">
