@@ -1,2 +1,49 @@
-<p>login works!</p>
-<button (click)="login()">Login</button>
+<div class="background">
+    <div fxLayoutAlign="center center" fxFlexFill>
+        <mat-card class="card">
+            <div fxLayout="row" fxLayoutAlign="center center" class="top-padding-25">
+                <img src="/assets/login_card_header.png" class="width-150">
+            </div>
+            <mat-card-content>
+                <form fxLayout="column" fxLayoutAlign="space-between center"
+                      [formGroup]="loginFormGroupControl"
+                      (ngSubmit)="login()">
+                    <mat-form-field class="top-padding-45 width-250" appearance="outline" color="primary">
+                        <mat-label>Login</mat-label>
+                        <input matInput
+                               placeholder="Enter login"
+                               required
+                               formControlName="loginControl"
+                               type="text">
+                        <mat-hint>Login hint</mat-hint>
+                        <mat-error>Login error</mat-error>
+                    </mat-form-field>
+
+                    <mat-form-field class="top-padding-45 width-250" appearance="outline" color="primary">
+                        <mat-label>Password</mat-label>
+                        <input matInput
+                               placeholder="Enter password"
+                               required
+                               formControlName="passwordControl"
+                               [type]="hide ? 'password' : 'text'">
+                        <button mat-icon-button matSuffix type="button"
+                                (click)="hide = !hide"
+                                (keypress)="false"
+                                [attr.aria-label]="'Hide password'"
+                                [attr.aria-pressed]="hide">
+                            <mat-icon [color]="hide ? undefined : 'accent'">
+                                {{hide ? 'visibility_off' : 'visibility'}}
+                            </mat-icon>
+                        </button>
+                        <mat-hint>Password hint</mat-hint>
+                        <mat-error>Message error</mat-error>
+                    </mat-form-field>
+
+                    <div class="top-padding-45" fxLayout="row" fxLayoutAlign="end center">
+                        <button type="submit" color="accent" mat-raised-button>Login</button>
+                    </div>
+                </form>
+            </mat-card-content>
+        </mat-card>
+    </div>
+</div>

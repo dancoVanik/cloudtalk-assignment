@@ -1,0 +1,32 @@
+.card {
+  -webkit-box-shadow: 0 0 50px 11px rgba(0, 0, 0, 0.33);
+  -moz-box-shadow: 0 0 50px 11px rgba(0, 0, 0, 0.33);
+  box-shadow: 0 0 50px 11px rgba(0, 0, 0, 0.33);
+  border-radius: 12px;
+  width: 280px;
+}
+
+.background {
+  width: 100%;
+  height: 100%;
+  opacity: 0.85;
+  background-image: url("/assets/cloudtalk-background.svg");
+  background-position: left center;
+  background-repeat: space;
+}
+
+.top-padding-45 {
+  padding-top: 45px;
+}
+
+.top-padding-25 {
+  padding-top: 25px;
+}
+
+.width-150 {
+  width: 150px;
+}
+
+.width-250 {
+  width: 250px;
+}
