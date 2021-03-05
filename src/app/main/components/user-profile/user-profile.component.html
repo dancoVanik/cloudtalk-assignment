@@ -1,0 +1,14 @@
+<div class="user-container" [style.background-color]="customBgColor">
+    <mat-form-field class="top-padding-45 width-250" appearance="standard" color="primary">
+        <mat-label>Color</mat-label>
+        <input matInput
+               [formControl]="colorControl"
+               type="color">
+        <mat-hint>Choose background color</mat-hint>
+    </mat-form-field>
+
+    <app-submitted-data></app-submitted-data>
+    <app-profile-form [customBgColor]="customBgColor"
+                      (submitEvent)="dataWasSubmitSuccessfully($event)">
+    </app-profile-form>
+</div>

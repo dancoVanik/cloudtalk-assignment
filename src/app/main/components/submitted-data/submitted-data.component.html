@@ -1,0 +1,28 @@
+<div class="container">
+    <h2 class="profile-header">User data</h2>
+    <div fxLayout="column" fxLayoutAlign="space-between center">
+        <form fxLayout="column" fxLayoutAlign="space-between center"
+              [formGroup]="submittedDataFormGroupControl">
+            <mat-form-field class="width-250" appearance="standard" color="primary">
+                <mat-label>Name</mat-label>
+                <input matInput
+                       formControlName="nameControl"
+                       type="text">
+            </mat-form-field>
+
+            <mat-form-field class="top-padding-45 width-250" appearance="standard" color="primary">
+                <mat-label>Email</mat-label>
+                <input matInput
+                       formControlName="emailControl"
+                       type="email">
+            </mat-form-field>
+
+            <mat-form-field class="top-padding-45 width-250" appearance="standard" color="primary">
+                <mat-label>Phone</mat-label>
+                <input matInput
+                       formControlName="phoneControl"
+                       type="tel">
+            </mat-form-field>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,40 @@
+.container {
+  -webkit-box-shadow: 0px 10px 20px -5px rgba(201, 201, 201, 1);
+  -moz-box-shadow: 0px 10px 20px -5px rgba(201, 201, 201, 1);
+  box-shadow: 0px 10px 20px -5px rgba(201, 201, 201, 1);
+  width: 600px;
+}
+
+.width-250 {
+  width: 250px;
+}
+
+.width-500 {
+  width: 500px;
+}
+
+.top-padding-45 {
+  padding-top: 45px;
+}
+
+.bottom-padding-45 {
+  padding-bottom: 45px;
+}
+
+.right-margin-10 {
+  margin-right: 10px;
+}
+
+.success-message {
+  background-color: #97e898;
+  width: 150px;
+  border-radius: 3px;
+  margin-bottom: 45px;
+  height: 38px;
+}
+
+.profile-header {
+  font-size: x-large;
+  font-weight: 300;
+  padding: 50px 0 0 50px;
+}

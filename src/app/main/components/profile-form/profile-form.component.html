@@ -1,0 +1,50 @@
+<div class="container">
+    <h2 class="profile-header">Profile</h2>
+    <div fxLayout="column" fxLayoutAlign="space-between center">
+        <form fxLayout="column" fxLayoutAlign="space-between center"
+              [formGroup]="profileFormGroupControl"
+              (ngSubmit)="submit()">
+            <mat-form-field class="width-250" appearance="standard" color="primary">
+                <mat-label>Name</mat-label>
+                <input matInput
+                       placeholder="Enter your name here ..."
+                       required
+                       formControlName="nameControl"
+                       type="text">
+                <mat-hint>Your first name with surname</mat-hint>
+                <mat-error>Wrong name format</mat-error>
+            </mat-form-field>
+
+            <mat-form-field class="top-padding-45 width-250" appearance="standard" color="primary">
+                <mat-label>Email</mat-label>
+                <input matInput
+                       placeholder="Enter your email here ..."
+                       required
+                       formControlName="emailControl"
+                       type="email">
+                <mat-hint>Your email address</mat-hint>
+                <mat-error>Wrong email format</mat-error>
+            </mat-form-field>
+
+            <mat-form-field class="top-padding-45 width-250" appearance="standard" color="primary">
+                <mat-label>Phone</mat-label>
+                <input matInput
+                       placeholder=""
+                       formControlName="phoneControl"
+                       type="tel">
+                <mat-hint>Your phone number</mat-hint>
+                <mat-error>Wrong phone number format</mat-error>
+            </mat-form-field>
+
+            <div class="top-padding-45 bottom-padding-45 width-500" fxLayout="row" fxLayoutAlign="end center">
+                <button type="button" (click)="reset()" mat-raised-button class="right-margin-10">Reset</button>
+                <button type="submit" [disabled]="dataSending$.value" color="accent" mat-raised-button>Submit</button>
+            </div>
+        </form>
+
+        <div fxLayout="row" fxLayoutAlign="space-evenly center" class="success-message" *ngIf="messageSuccess">
+            <span>Success</span>
+            <mat-icon>done</mat-icon>
+        </div>
+    </div>
+</div>
