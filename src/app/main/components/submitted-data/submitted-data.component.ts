@@ -13,9 +13,9 @@ export class SubmittedDataComponent implements OnInit {
 
     constructor(private _userDataService: UserDataService) {
         this._userDataService.userDataFormGroupControl$.subscribe(groupControl => {
-            this.submittedDataFormGroupControl.get('nameControl').setValue(groupControl.get('nameControl').value)
-            this.submittedDataFormGroupControl.get('emailControl').setValue(groupControl.get('emailControl').value)
-            this.submittedDataFormGroupControl.get('phoneControl').setValue(groupControl.get('phoneControl').value)
+            this.submittedDataFormGroupControl.get(UserDataService.NAME_CONTROL).setValue(groupControl.get(UserDataService.NAME_CONTROL).value)
+            this.submittedDataFormGroupControl.get(UserDataService.EMAIL_CONTROL ).setValue(groupControl.get(UserDataService.EMAIL_CONTROL ).value)
+            this.submittedDataFormGroupControl.get(UserDataService.PHONE_CONTROL).setValue(groupControl.get(UserDataService.PHONE_CONTROL).value)
         });
     }
 

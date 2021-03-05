@@ -35,9 +35,9 @@ export class ProfileFormComponent implements OnInit, OnDestroy {
                 this.messageSuccess = false;
             }, 1000);
             const body = {
-                name: this.profileFormGroupControl.get('nameControl').value,
-                email: this.profileFormGroupControl.get('emailControl').value,
-                phone_number: this.profileFormGroupControl.get('phoneControl').value
+                name: this.profileFormGroupControl.get(UserDataService.NAME_CONTROL).value,
+                email: this.profileFormGroupControl.get(UserDataService.EMAIL_CONTROL ).value,
+                phone_number: this.profileFormGroupControl.get(UserDataService.PHONE_CONTROL).value
             } as Profile
             this.dataSending$.next(true)
             this._resourceService.post$<Profile>('post', ResourceProviderService.SERVER_URL, body).subscribe(() => {

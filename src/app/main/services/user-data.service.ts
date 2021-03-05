@@ -5,6 +5,10 @@ import {Observable, ReplaySubject} from 'rxjs';
 @Injectable()
 export class UserDataService implements OnDestroy {
 
+    public static readonly NAME_CONTROL = 'nameControl'
+    public static readonly EMAIL_CONTROL = 'emailControl'
+    public static readonly PHONE_CONTROL = 'phoneControl'
+
     private readonly _userDataFormGroupControl$: ReplaySubject<FormGroup>
 
     constructor() {
