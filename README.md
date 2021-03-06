@@ -1,7 +1,8 @@
 # Cloudtalk assignment
-- author : `Daniel Vaník`
 ![Angular 11](https://img.shields.io/badge/Angular-11-red)
 ![TypeScript 4.1.2](https://img.shields.io/badge/TypeScript-4.1.2-blue)
+
+- author : `Daniel Vaník`
 
 ## Bonuses
 - [ ] implement lazy loading of the components into the routing
