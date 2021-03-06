@@ -1,6 +1,6 @@
 import {Component, EventEmitter, Input, OnDestroy, OnInit, Output} from '@angular/core';
 import {FormControl, FormGroup, Validators} from '@angular/forms';
-import {ResourceProviderService} from '../../../resources/resource-provider.service';
+import {ResourceProviderService} from '../../../resources/services/resource-provider.service';
 import {Profile} from '../../../resources/models/profile';
 import {BehaviorSubject} from 'rxjs';
 import {UserDataService} from '../../services/user-data.service';
@@ -33,7 +33,7 @@ export class ProfileFormComponent implements OnInit, OnDestroy {
             this._userDataService.setUserDataFormGroupControl(this.profileFormGroupControl)
             setTimeout(() => {
                 this.messageSuccess = false;
-            }, 1000);
+            }, 2000);
             const body = {
                 name: this.profileFormGroupControl.get(UserDataService.NAME_CONTROL).value,
                 email: this.profileFormGroupControl.get(UserDataService.EMAIL_CONTROL ).value,

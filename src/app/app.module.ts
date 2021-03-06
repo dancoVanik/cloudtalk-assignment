@@ -7,7 +7,8 @@ import {AppRoutingModule} from './app-routing.module';
 import {AuthenticationModule} from './authentication/authentication.module';
 import {LoginModule} from './login/login.module';
 import {MainModule} from './main/main.module';
-import {HttpClientModule} from '@angular/common/http';
+import {HTTP_INTERCEPTORS, HttpClientModule} from '@angular/common/http';
+import {HttpErrorInterceptor} from './resources/interceptors/http-error-interceptor';
 
 @NgModule({
     declarations: [
@@ -22,7 +23,13 @@ import {HttpClientModule} from '@angular/common/http';
         MainModule,
         HttpClientModule
     ],
-    providers: [],
+    providers: [
+        {
+            provide: HTTP_INTERCEPTORS,
+            useClass: HttpErrorInterceptor,
+            multi: true
+        }
+    ],
     bootstrap: [AppComponent]
 })
 export class AppModule {
