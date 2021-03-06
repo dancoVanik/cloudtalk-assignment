@@ -42,7 +42,8 @@ export class UserProfileComponent implements OnInit {
     loadFooData(paramValue: string): Observable<any> {
         return this._resourceService.get$('get', ResourceProviderService.SERVER_URL, new HttpParams().append('foo', paramValue))
             .pipe(
-                catchError(() => {
+                catchError((err) => {
+                    console.log(err)
                     this.setMessageWithIcon('Error', 'error')
                     return of()
                 })
