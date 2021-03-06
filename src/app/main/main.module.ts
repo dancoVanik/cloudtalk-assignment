@@ -6,6 +6,7 @@ import {ProfileFormComponent} from './components/profile-form/profile-form.compo
 import {UserProfileComponent} from './components/user-profile/user-profile.component';
 import {MaterialModule} from '../material/material.module';
 import {UserDataService} from './services/user-data.service';
+import {MainRoutingModule} from './main-routing.module';
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import {UserDataService} from './services/user-data.service';
     ],
     imports: [
         CommonModule,
-        MaterialModule
+        MaterialModule,
+        MainRoutingModule
     ],
     providers: [UserDataService]
 })

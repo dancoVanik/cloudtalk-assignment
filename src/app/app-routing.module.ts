@@ -1,8 +1,7 @@
 import {NgModule} from '@angular/core';
-import {RouterModule, Routes} from '@angular/router';
+import {PreloadAllModules, RouterModule, Routes} from '@angular/router';
 import {AuthenticationGuardService} from './authentication/services/authentication-guard.service';
 import {LoginComponent} from './login/components/login/login.component';
-import {MainComponent} from './main/components/main/main.component';
 
 
 const routes: Routes = [
@@ -12,7 +11,7 @@ const routes: Routes = [
     },
     {
         path: '',
-        component: MainComponent,
+        loadChildren: () => import('./main/main.module').then(m => m.MainModule),
         canActivate: [AuthenticationGuardService]
     },
     {
@@ -22,7 +21,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-    imports: [RouterModule.forRoot(routes)],
+    imports: [RouterModule.forRoot(routes, {preloadingStrategy: PreloadAllModules})],
     exports: [RouterModule]
 })
 
